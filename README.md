@@ -20,7 +20,7 @@ Do you need a robust method for parameter estimation of Gaussians within MATLAB?
 
 ### Demo
 
-![Gif demonstrating msPE](demo.gif)
+![Gif demonstrating msPE](fig/demo.gif)
 
 ### Information on msPE
 
@@ -47,15 +47,16 @@ Start the file `run_me.m` from within MATLAB. Here you can define the signals to
 
 Subsequently, the algorithm processes each signal using msPE (shown here: Gaussian signal corrupted by pink noise)
 
-<img src="demo.png" width="480" />
+<img src="fig/demo.png" width="480" />
 
 After processing each signal, a summary is given. Individual results can be opened by clicking the respective index.
 
-<img src="summary.png" width="480" />
+<img src="fig/summary.png" width="480" />
 
 ## Customization
-If you want to customize msPE to your signals, we provide `quickstart.m` which provides a starting point in only 30 lines 
-of code. Just replace the Gaussian signal with your own.
+If you want to customize msPE to your signals, we provide `quickstart.m` which can serve as a starting point (30 lines 
+of code only). Just replace the Gaussian signal with your own data. The only open parameter is the number of scales. If
+msPE fails, we suggest to reduce the number of scales.
 
 ```matlab
 clear all; close all; format('compact');
@@ -90,7 +91,7 @@ plot(t, signal_mspe, 'Color', 'k', 'LineWidth', 2);
 legend('Data', 'Gaussian estimated by msPE');
 ```
 
-<img src="quickstart.png" width="480" />
+<img src="fig/quickstart.png" width="480" />
 
 ## Citation
 
